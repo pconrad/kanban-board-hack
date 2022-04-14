@@ -82,12 +82,12 @@ const createIssueStep = async (step, filename, project) => {
 const addIssueToKanbanBoardStep = async (step, filename, project) => {
   const firstLine = await getFirstLine(filename);
   return `
-  - name: Add Issue ${step} to Kanban board ${project}
-    uses: peter-evans/create-or-update-project-card@v1
-    with:
-      project-name: ${project}
-      column-name: Todo
-      issue-number: \${{ steps.step${step}.outputs.issue-number }}`;
+    - name: Add Issue ${step} to Kanban board ${project}
+      uses: peter-evans/create-or-update-project-card@v1
+      with:
+        project-name: ${project}
+        column-name: Todo
+        issue-number: \${{ steps.step${step}.outputs.issue-number }}`;
 }
 
 
