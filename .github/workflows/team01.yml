@@ -23,8 +23,8 @@ jobs:
       id: step1
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up a team deployments for prod and qa on Heroku
-        content-filepath: issues/issue00_set_up_deployment_on_heroku.md
+        title: Customize Home Controller and Tests
+        content-filepath: issues/issue92_changes_to_README.md
     - name: Add Issue 1 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -36,8 +36,8 @@ jobs:
       id: step2
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up codecov token and codecov badge.
-        content-filepath: issues/issue02_codecov_token.md
+        title: Update README with correct information in place of TODO
+        content-filepath: issues/issue90_customize_home_controller.md
     - name: Add Issue 2 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -49,8 +49,8 @@ jobs:
       id: step3
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up location service and tests
-        content-filepath: issues/issue12_location_service_and_tests.md
+        title: Set up zipcode controller and tests
+        content-filepath: issues/issue66_zipcode_controller_and_tests.md
     - name: Add Issue 3 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -62,8 +62,8 @@ jobs:
       id: step4
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up location controller and tests
-        content-filepath: issues/issue16_location_controller_and_tests.md
+        title: Set up zipcode service and tests
+        content-filepath: issues/issue62_zipcode_service_and_tests.md
     - name: Add Issue 4 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -75,8 +75,8 @@ jobs:
       id: step5
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up public holiday service and tests
-        content-filepath: issues/issue22_holiday_service_and_tests.md
+        title: Set up university controller and tests
+        content-filepath: issues/issue56_university_controller_and_tests.md
     - name: Add Issue 5 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -88,8 +88,8 @@ jobs:
       id: step6
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up public holiday controller and tests
-        content-filepath: issues/issue26_holiday_controller_and_tests.md
+        title: Set up university service and tests
+        content-filepath: issues/issue52_university_service_and_tests.md
     - name: Add Issue 6 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -101,8 +101,8 @@ jobs:
       id: step7
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up reddit service and tests
-        content-filepath: issues/issue32_reddit_service_and_tests.md
+        title: Set up tides controller and tests
+        content-filepath: issues/issue46_tides_controller_and_tests.md
     - name: Add Issue 7 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -114,8 +114,8 @@ jobs:
       id: step8
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up reddit controller and tests
-        content-filepath: issues/issue36_reddit_controller_and_tests.md
+        title: Set up tides service and tests
+        content-filepath: issues/issue42_tides_service_and_tests.md
     - name: Add Issue 8 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -127,8 +127,8 @@ jobs:
       id: step9
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up tides service and tests
-        content-filepath: issues/issue42_tides_service_and_tests.md
+        title: Set up reddit controller and tests
+        content-filepath: issues/issue36_reddit_controller_and_tests.md
     - name: Add Issue 9 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -140,8 +140,8 @@ jobs:
       id: step10
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up tides controller and tests
-        content-filepath: issues/issue46_tides_controller_and_tests.md
+        title: Set up reddit service and tests
+        content-filepath: issues/issue32_reddit_service_and_tests.md
     - name: Add Issue 10 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -153,8 +153,8 @@ jobs:
       id: step11
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up university service and tests
-        content-filepath: issues/issue52_university_service_and_tests.md
+        title: Set up public holiday controller and tests
+        content-filepath: issues/issue26_holiday_controller_and_tests.md
     - name: Add Issue 11 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -166,8 +166,8 @@ jobs:
       id: step12
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up university controller and tests
-        content-filepath: issues/issue56_university_controller_and_tests.md
+        title: Set up public holiday service and tests
+        content-filepath: issues/issue22_holiday_service_and_tests.md
     - name: Add Issue 12 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -179,8 +179,8 @@ jobs:
       id: step13
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up zipcode service and tests
-        content-filepath: issues/issue62_zipcode_service_and_tests.md
+        title: Set up location controller and tests
+        content-filepath: issues/issue16_location_controller_and_tests.md
     - name: Add Issue 13 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -192,8 +192,8 @@ jobs:
       id: step14
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up zipcode controller and tests
-        content-filepath: issues/issue66_zipcode_controller_and_tests.md
+        title: Set up location service and tests
+        content-filepath: issues/issue12_location_service_and_tests.md
     - name: Add Issue 14 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -205,8 +205,8 @@ jobs:
       id: step15
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Update README with correct information in place of TODO
-        content-filepath: issues/issue90_customize_home_controller.md
+        title: Set up codecov token and codecov badge.
+        content-filepath: issues/issue02_codecov_token.md
     - name: Add Issue 15 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -218,8 +218,8 @@ jobs:
       id: step16
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Customize Home Controller and Tests
-        content-filepath: issues/issue92_changes_to_README.md
+        title: Set up a team deployments for prod and qa on Heroku
+        content-filepath: issues/issue00_set_up_deployment_on_heroku.md
     - name: Add Issue 16 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:

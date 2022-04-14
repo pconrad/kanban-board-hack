@@ -18,7 +18,11 @@ const main = async () => {
             console.log(err)
         } else {
             var step = 1;
+            var filesReversed = [];
             for (const filename of files) {
+              filesReversed.unshift(filename);
+            }
+            for (const filename of filesReversed) {
                 const text = await createIssueStep(step, filename, kanbanBoard);
                 console.log(text);
                 step++;
