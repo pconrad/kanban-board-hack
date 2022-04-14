@@ -37,7 +37,7 @@ jobs:
       uses: peter-evans/create-issue-from-file@v3
       with:
         title: Set up codecov token and codecov badge.
-        content-filepath: issues/issue02_codecov_token copy.md
+        content-filepath: issues/issue02_codecov_token.md
     - name: Add Issue 2 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -50,7 +50,7 @@ jobs:
       uses: peter-evans/create-issue-from-file@v3
       with:
         title: Set up location service and tests
-        content-filepath: issues/issue12_location_service_and_tests copy 2.md
+        content-filepath: issues/issue12_location_service_and_tests.md
     - name: Add Issue 3 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -63,7 +63,7 @@ jobs:
       uses: peter-evans/create-issue-from-file@v3
       with:
         title: Set up location controller and tests
-        content-filepath: issues/issue16_location_controller_and_tests copy.md
+        content-filepath: issues/issue16_location_controller_and_tests.md
     - name: Add Issue 4 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -154,7 +154,7 @@ jobs:
       uses: peter-evans/create-issue-from-file@v3
       with:
         title: Set up university service and tests
-        content-filepath: issues/issue52_university_service_and_tests copy.md
+        content-filepath: issues/issue52_university_service_and_tests.md
     - name: Add Issue 11 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -206,7 +206,7 @@ jobs:
       uses: peter-evans/create-issue-from-file@v3
       with:
         title: Update README with correct information in place of TODO
-        content-filepath: issues/issue90_customize_home_controller copy.md
+        content-filepath: issues/issue90_customize_home_controller.md
     - name: Add Issue 15 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
