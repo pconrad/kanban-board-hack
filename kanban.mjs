@@ -75,11 +75,11 @@ const createIssueStep = async (step, filename, project) => {
         title: ${firstLine}
         content-filepath: ${filename}
     - name: Add Issue ${step} to Kanban board ${project}
-        uses: peter-evans/create-or-update-project-card@v1
-        with:
-          project-name: ${project}
-          column-name: Todo
-          issue-number: \${{ steps.step${step}.outputs.issue-number }}`;
+      uses: peter-evans/create-or-update-project-card@v1
+      with:
+        project-name: ${project}
+        column-name: Todo
+        issue-number: \${{ steps.step${step}.outputs.issue-number }}`;
 }
 
 
