@@ -53,9 +53,12 @@ jobs:
         echo 'PROJECT_NUMBER='$project_number >> $GITHUB_ENV
       env:
         GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
-    - name: Create Todo Column on ${kanbanBoard}
+    - name: Create Columns on ${kanbanBoard}
       run: |
         gh api -X POST /projects/\${PROJECT_NUMBER}/columns  -H "Accept: application/vnd.github.v3+json"  -f name="Todo" 
+        gh api -X POST /projects/\${PROJECT_NUMBER}/columns  -H "Accept: application/vnd.github.v3+json"  -f name="In Progress" 
+        gh api -X POST /projects/\${PROJECT_NUMBER}/columns  -H "Accept: application/vnd.github.v3+json"  -f name="In Review" 
+        gh api -X POST /projects/\${PROJECT_NUMBER}/columns  -H "Accept: application/vnd.github.v3+json"  -f name="Done" 
       env:
         GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}`;
 }
