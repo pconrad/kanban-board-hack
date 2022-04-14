@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Create Project team02
+    - name: Create Project team01
       run: |
-        project_number=$(gh api -X POST /repos/${{ github.repository }}/projects  -H "Accept: application/vnd.github.v3+json"  -f name="team02" --jq '.id')
+        project_number=$(gh api -X POST /repos/${{ github.repository }}/projects  -H "Accept: application/vnd.github.v3+json"  -f name="team01" --jq '.id')
         echo 'PROJECT_NUMBER='$project_number >> $GITHUB_ENV
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Create Todo Column on team02
+    - name: Create Todo Column on team01
       run: |
         gh api -X POST /projects/${PROJECT_NUMBER}/columns  -H "Accept: application/vnd.github.v3+json"  -f name="Todo" 
       env:
@@ -25,10 +25,10 @@ jobs:
       with:
         title: Set up a team deployments for prod and qa on Heroku
         content-filepath: issues/issue00_set_up_deployment_on_heroku.md
-    - name: Add Issue 1 to Kanban board team02
+    - name: Add Issue 1 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step1.outputs.issue-number }}
 
@@ -36,12 +36,12 @@ jobs:
       id: step2
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up -docs and -docs-qa websites to host Storybook.
-        content-filepath: issues/issue01_docs_and_docs_qa_repos_are_deployed.md
-    - name: Add Issue 2 to Kanban board team02
+        title: Set up codecov token and codecov badge.
+        content-filepath: issues/issue02_codecov_token.md
+    - name: Add Issue 2 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step2.outputs.issue-number }}
 
@@ -49,12 +49,12 @@ jobs:
       id: step3
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Set up codecov token and codecov badge.
-        content-filepath: issues/issue02_codecov_token.md
-    - name: Add Issue 3 to Kanban board team02
+        title: Set up location service and tests
+        content-filepath: issues/issue12_location_service_and_tests.md
+    - name: Add Issue 3 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step3.outputs.issue-number }}
 
@@ -62,12 +62,12 @@ jobs:
       id: step4
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Create database table for CollegiateSubreddits
-        content-filepath: issues/issue11_create_database_table.md
-    - name: Add Issue 4 to Kanban board team02
+        title: Set up location controller and tests
+        content-filepath: issues/issue16_location_controller_and_tests.md
+    - name: Add Issue 4 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step4.outputs.issue-number }}
 
@@ -75,12 +75,12 @@ jobs:
       id: step5
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Create `CollegiateSubredditController`, add `GET` (index) and `POST` (create)
-        content-filepath: issues/issue12_add_list_all_and_post_endpoints.md
-    - name: Add Issue 5 to Kanban board team02
+        title: Set up public holiday service and tests
+        content-filepath: issues/issue22_holiday_service_and_tests.md
+    - name: Add Issue 5 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step5.outputs.issue-number }}
 
@@ -88,12 +88,12 @@ jobs:
       id: step6
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `GET` (show) endpoint for a single record in CollegiateSubreddits table
-        content-filepath: issues/issue13_add_get_for_single_item.md
-    - name: Add Issue 6 to Kanban board team02
+        title: Set up public holiday controller and tests
+        content-filepath: issues/issue26_holiday_controller_and_tests.md
+    - name: Add Issue 6 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step6.outputs.issue-number }}
 
@@ -101,12 +101,12 @@ jobs:
       id: step7
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `PUT` (edit) endpoint for a single record in CollegiateSubreddits table
-        content-filepath: issues/issue14_add_put_for_single_item.md
-    - name: Add Issue 7 to Kanban board team02
+        title: Set up reddit service and tests
+        content-filepath: issues/issue32_reddit_service_and_tests.md
+    - name: Add Issue 7 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step7.outputs.issue-number }}
 
@@ -114,12 +114,12 @@ jobs:
       id: step8
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `DELETE` endpoint for a specific record in CollegiateSubreddits table.
-        content-filepath: issues/issue15_add_delete_for_single_item.md
-    - name: Add Issue 8 to Kanban board team02
+        title: Set up reddit controller and tests
+        content-filepath: issues/issue36_reddit_controller_and_tests.md
+    - name: Add Issue 8 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step8.outputs.issue-number }}
 
@@ -127,12 +127,12 @@ jobs:
       id: step9
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Create database table for UCSBSubjects
-        content-filepath: issues/issue21_create_database_table_ucsb_subject.md
-    - name: Add Issue 9 to Kanban board team02
+        title: Set up tides service and tests
+        content-filepath: issues/issue42_tides_service_and_tests.md
+    - name: Add Issue 9 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step9.outputs.issue-number }}
 
@@ -140,12 +140,12 @@ jobs:
       id: step10
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Create `UCSBSubjectController`, add `GET` (index) and `POST` (create)
-        content-filepath: issues/issue22_add_list_all_and_post_endpoints.md
-    - name: Add Issue 10 to Kanban board team02
+        title: Set up tides controller and tests
+        content-filepath: issues/issue46_tides_controller_and_tests.md
+    - name: Add Issue 10 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step10.outputs.issue-number }}
 
@@ -153,12 +153,12 @@ jobs:
       id: step11
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `GET` (show) endpoint for a single record in UCSBSubjects table
-        content-filepath: issues/issue23_add_get_for_single_item.md
-    - name: Add Issue 11 to Kanban board team02
+        title: Set up university service and tests
+        content-filepath: issues/issue52_university_service_and_tests.md
+    - name: Add Issue 11 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step11.outputs.issue-number }}
 
@@ -166,12 +166,12 @@ jobs:
       id: step12
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `PUT` (edit) endpoint for a single record in UCSBSubjects table
-        content-filepath: issues/issue24_add_put_for_single_item.md
-    - name: Add Issue 12 to Kanban board team02
+        title: Set up university controller and tests
+        content-filepath: issues/issue56_university_controller_and_tests.md
+    - name: Add Issue 12 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step12.outputs.issue-number }}
 
@@ -179,12 +179,12 @@ jobs:
       id: step13
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `DELETE` endpoint for a specific record in UCSBSubjects table.
-        content-filepath: issues/issue25_add_delete_for_single_item.md
-    - name: Add Issue 13 to Kanban board team02
+        title: Set up zipcode service and tests
+        content-filepath: issues/issue62_zipcode_service_and_tests.md
+    - name: Add Issue 13 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step13.outputs.issue-number }}
 
@@ -192,12 +192,12 @@ jobs:
       id: step14
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Create database table for UCSBRequirements
-        content-filepath: issues/issue31_create_database_table_ucsb_subject copy.md
-    - name: Add Issue 14 to Kanban board team02
+        title: Set up zipcode controller and tests
+        content-filepath: issues/issue66_zipcode_controller_and_tests.md
+    - name: Add Issue 14 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step14.outputs.issue-number }}
 
@@ -205,12 +205,12 @@ jobs:
       id: step15
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title: Create `UCSBRequirementController`, add `GET` (index) and `POST` (create)
-        content-filepath: issues/issue32_add_list_all_and_post_endpoints copy.md
-    - name: Add Issue 15 to Kanban board team02
+        title: Update README with correct information in place of TODO
+        content-filepath: issues/issue90_customize_home_controller.md
+    - name: Add Issue 15 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step15.outputs.issue-number }}
 
@@ -218,37 +218,11 @@ jobs:
       id: step16
       uses: peter-evans/create-issue-from-file@v3
       with:
-        title:  Add `GET` (show) endpoint for a single record in UCSBRequirements table
-        content-filepath: issues/issue33_add_get_for_single_item copy.md
-    - name: Add Issue 16 to Kanban board team02
+        title: Customize Home Controller and Tests
+        content-filepath: issues/issue92_changes_to_README.md
+    - name: Add Issue 16 to Kanban board team01
       uses: peter-evans/create-or-update-project-card@v1
       with:
-        project-name: team02
+        project-name: team01
         column-name: Todo
         issue-number: ${{ steps.step16.outputs.issue-number }}
-
-    - name: Create Issue 17 From File
-      id: step17
-      uses: peter-evans/create-issue-from-file@v3
-      with:
-        title:  Add `PUT` (edit) endpoint for a single record in UCSBRequirements table
-        content-filepath: issues/issue34_add_put_for_single_item copy.md
-    - name: Add Issue 17 to Kanban board team02
-      uses: peter-evans/create-or-update-project-card@v1
-      with:
-        project-name: team02
-        column-name: Todo
-        issue-number: ${{ steps.step17.outputs.issue-number }}
-
-    - name: Create Issue 18 From File
-      id: step18
-      uses: peter-evans/create-issue-from-file@v3
-      with:
-        title:  Add `DELETE` endpoint for a specific record in UCSBRequirements table.
-        content-filepath: issues/issue35_add_delete_for_single_item copy.md
-    - name: Add Issue 18 to Kanban board team02
-      uses: peter-evans/create-or-update-project-card@v1
-      with:
-        project-name: team02
-        column-name: Todo
-        issue-number: ${{ steps.step18.outputs.issue-number }}

@@ -12,7 +12,7 @@ Set up codecov token and codecov badge.
    (note that you'll have to edit this URL to match your repo). You may
    need to log in first.
 
-   * <https://app.codecov.io/gh/ucsb-cs156-s22/team01-s22-6pm-4/settings>
+   * <https://app.codecov.io/gh/ucsb-cs156-w22/team02-w22-6pm-4/settings>
 
 2. On that page, you'll see a place to set the default branch.  Be sure
    it is set to `main`.
@@ -22,12 +22,7 @@ Set up codecov token and codecov badge.
 
 4. On that same page, at left you'll see a menu item called `Badge`.
    
-   Go to that page
-   
-   Be sure that the branch selected is `main` and not `master`
-   
-   Copy the Markdown for the badge.  
-   
-   Put it in your README.md.  (Make a branch and do a PR for this, even
-   though it may seem like a trivial change.  It's good to practice
-   the mechanics here, since you'll need to do them many times in this course.)
+   Go to that page, and copy the Markdown for the badge.  Put it in your
+   README.md.  For this, it's ok to just edit the README.md directly 
+   instead of doing a PR; or you can make a branch and do a PR for
+   practice (your choice.)
