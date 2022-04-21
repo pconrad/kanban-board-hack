@@ -5,7 +5,7 @@
 - [ ] In `UCSBRequirementController.java` there is code for an 
       endpoint `DELETE /api/UCSBRequirements?id=123` endpoint 
       that deletes the record if it exists, and returns 200 (ok) and 
-      the text `record 123 deleted`, or returns 400 (Bad Request) and
+      the text `record 123 deleted`, or returns 404 (Not Found) and
       the text `record 123 not found` if it does not.
 - [ ] The Swagger-UI endpoints for this endpoint is well documented
       so that any member of the team can understand how to use it.
